@@ -58,7 +58,7 @@ public class MetronomeController : MonoBehaviour {
         double secondsPerBeat = 1d / bps;
         progress = (elapsedSeconds() % secondsPerBeat) / secondsPerBeat;
         //needle.transform.position = Vector3.Lerp((isLeftActive ? rightExtent : leftExtent).transform.position, getCurrentTarget().transform.position, (float) progress);
-        float newX = isLeftActive ? rightExtent.transform.position.x - 10f * (float)progress : leftExtent.transform.position.x + 10f * (float)progress;
+        float newX = isLeftActive ? rightExtent.transform.position.x - 6f * (float)progress : leftExtent.transform.position.x + 6f * (float)progress;
         needle.transform.position = new Vector3(newX, needle.transform.position.y, needle.transform.position.z);
 
     }
