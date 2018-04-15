@@ -5,11 +5,10 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using SonicBloom.Koreo.Demos;
+using SonicBloom.Koreo;
 
-namespace SonicBloom.Koreo.Demos
-{
-	[AddComponentMenu("Koreographer/Demos/Rhythm Game/Rhythm Game Controller")]
-	public class RhythmGameController : MonoBehaviour
+	public class GameControllerBeatInfinity : MonoBehaviour
 	{
 		#region Fields
 
@@ -25,16 +24,19 @@ namespace SonicBloom.Koreo.Demos
 		public float noteSpeed = 1f;
 
 		[Tooltip("The archetype (blueprints) to use for generating notes.  Can be a prefab.")]
-		public NoteObject noteObjectArchetype;
+		public NoteObjectBeatInfinity noteObjectArchetype;
 
 		[Tooltip("The list of Lane Controller objects that represent a lane for an event to travel down.")]
-		public List<LaneController> noteLanes = new List<LaneController>();
+		public List<LaneControllerBeatInfinity> noteLanes = new List<LaneControllerBeatInfinity>();
 
 		[Tooltip("The amount of time in seconds to provide before playback of the audio begins.  Changes to this value are not immediately handled during the lead-in phase while playing in the Editor.")]
 		public float leadInTime;
 
 		[Tooltip("The Audio Source through which the Koreographed audio will be played.  Be sure to disable 'Auto Play On Awake' in the Music Player.")]
 		public AudioSource audioCom;
+
+        [Tooltip("The list of types of 'hit' a player can achieve on a note, from best at the top to worst at the bottom.")]
+        public string[] hitQualityTypes;
 
 		// The amount of leadInTime left before the audio is audible.
 		float leadInTimeLeft;
@@ -50,7 +52,7 @@ namespace SonicBloom.Koreo.Demos
 		int hitWindowRangeInSamples;	// The sample range within which a viable event may be hit.
 		
 		// The pool for containing note objects to reduce unnecessary Instantiation/Destruction.
-		Stack<NoteObject> noteObjectPool = new Stack<NoteObject>();
+		Stack<NoteObjectBeatInfinity> noteObjectPool = new Stack<NoteObjectBeatInfinity>();
 
 		#endregion
 		#region Properties
@@ -69,7 +71,7 @@ namespace SonicBloom.Koreo.Demos
 		{
 			get
 			{
-				return noteSpeed * (hitWindowRangeInMS * 0.001f);
+				return noteSpeed * (hitWindowRangeInMS * hitQualityTypes.Length * 0.001f);
 			}
 		}
 
@@ -96,44 +98,52 @@ namespace SonicBloom.Koreo.Demos
 		#region Methods
 
 		void Start()
-		{
-			InitializeLeadIn();
+    {
+        InitializeLeadIn();
 
-			// Initialize all the Lanes.
-			for (int i = 0; i < noteLanes.Count; ++i)
-			{
-				noteLanes[i].Initialize(this);
-			}
+        // Initialize all the Lanes.
+        for (int i = 0; i < noteLanes.Count; ++i)
+        {
+            noteLanes[i].Initialize(this);
+        }
 
-			// Initialize events.
-			playingKoreo = Koreographer.Instance.GetKoreographyAtIndex(0);
-			// Grab all the events out of the Koreography.
-			KoreographyTrackBase rhythmTrack = playingKoreo.GetTrackByID(eventID);
-			List<KoreographyEvent> rawEvents = rhythmTrack.GetAllEvents();
-            //GameObject.FindObjectOfType<MetronomeController>().allEvents = rawEvents;
-			for (int i = 0; i < rawEvents.Count; ++i)
-			{
-				KoreographyEvent evt = rawEvents[i];
-				string payload = evt.GetTextValue();
-				
-				// Find the right lane.
-				for (int j = 0; j < noteLanes.Count; ++j)
-				{
-					LaneController lane = noteLanes[j];
-					if (lane.DoesMatchPayload(payload))
-					{
-						// Add the object for input tracking.
-						lane.AddEventToLane(evt);
+        // Initialize events.
+        playingKoreo = Koreographer.Instance.GetKoreographyAtIndex(0);
+        // Grab all the events out of the Koreography.
+        KoreographyTrackBase rhythmTrack = playingKoreo.GetTrackByID(eventID);
+        List<KoreographyEvent> rawEvents = rhythmTrack.GetAllEvents();
+        InitializeMetronomeIfPresent(rawEvents);
+        for (int i = 0; i < rawEvents.Count; ++i)
+        {
+            KoreographyEvent evt = rawEvents[i];
+            string payload = evt.GetTextValue();
 
-						// Break out of the lane searching loop.
-						break;
-					}
-				}
-			}
-		}
+            // Find the right lane.
+            for (int j = 0; j < noteLanes.Count; ++j)
+            {
+                LaneControllerBeatInfinity lane = noteLanes[j];
+                if (lane.DoesMatchPayload(payload))
+                {
+                    // Add the object for input tracking.
+                    lane.AddEventToLane(evt);
 
-		// Sets up the lead-in-time.  Begins audio playback immediately if the specified lead-in-time is zero.
-		void InitializeLeadIn()
+                    // Break out of the lane searching loop.
+                    break;
+                }
+            }
+        }
+    }
+
+    private static void InitializeMetronomeIfPresent(List<KoreographyEvent> rawEvents)
+    {
+        MetronomeController metronome = GameObject.FindObjectOfType<MetronomeController>();
+        if (metronome != null) {
+            metronome.allEvents = rawEvents;
+        }
+    }
+
+    // Sets up the lead-in-time.  Begins audio playback immediately if the specified lead-in-time is zero.
+    void InitializeLeadIn()
 		{
 			// Initialize the lead-in-time only if one is specified.
 			if (leadInTime > 0f)
@@ -185,9 +195,9 @@ namespace SonicBloom.Koreo.Demos
 		}
 
 		// Retrieves a frehsly activated Note Object from the pool.
-		public NoteObject GetFreshNoteObject()
+		public NoteObjectBeatInfinity GetFreshNoteObject()
 		{
-			NoteObject retObj;
+			NoteObjectBeatInfinity retObj;
 
 			if (noteObjectPool.Count > 0)
 			{
@@ -195,7 +205,7 @@ namespace SonicBloom.Koreo.Demos
 			}
 			else
 			{
-				retObj = GameObject.Instantiate<NoteObject>(noteObjectArchetype);
+				retObj = GameObject.Instantiate<NoteObjectBeatInfinity>(noteObjectArchetype);
 			}
 			
 			retObj.gameObject.SetActive(true);
@@ -205,7 +215,7 @@ namespace SonicBloom.Koreo.Demos
 		}
 
 		// Deactivates and returns a Note Object to the pool.
-		public void ReturnNoteObjectToPool(NoteObject obj)
+		public void ReturnNoteObjectToPool(NoteObjectBeatInfinity obj)
 		{
 			if (obj != null)
 			{
@@ -243,4 +253,3 @@ namespace SonicBloom.Koreo.Demos
 
 		#endregion
 	}
-}

@@ -8,7 +8,7 @@ using UnityEngine;
 namespace SonicBloom.Koreo.Demos
 {
 	[AddComponentMenu("Koreographer/Demos/Rhythm Game/Note Object")]
-	public class NoteObject : MonoBehaviour
+	public class NoteObjectBeatInfinity : MonoBehaviour
 	{
 		#region Fields
 
@@ -19,10 +19,10 @@ namespace SonicBloom.Koreo.Demos
 		protected KoreographyEvent trackedEvent;
 
 		// If active, the Lane Controller that this Note Object is contained by.
-		protected LaneController laneController;
+		protected LaneControllerBeatInfinity laneController;
 
 		// If active, the Rhythm Game Controller that controls the game this Note Object is found within.
-		protected RhythmGameController gameController;
+		protected GameControllerBeatInfinity gameController;
 
 		#endregion
 		#region Static Methods
@@ -37,7 +37,7 @@ namespace SonicBloom.Koreo.Demos
 		#region Methods
 
 		// Prepares the Note Object for use.
-		public void Initialize(KoreographyEvent evt, Color color, LaneController laneCont, RhythmGameController gameCont)
+		public void Initialize(KoreographyEvent evt, Color color, LaneControllerBeatInfinity laneCont, GameControllerBeatInfinity gameCont)
 		{
 			trackedEvent = evt;
 			visuals.color = color;
@@ -100,9 +100,10 @@ namespace SonicBloom.Koreo.Demos
 		{
 			int noteTime = trackedEvent.StartSample;
 			int curTime = gameController.DelayedSampleTime;
-			int hitWindow = gameController.HitWindowSampleWidth;
+			int hitWindowWidth = gameController.HitWindowSampleWidth;
+            int numberOfWindows = gameController.hitQualityTypes.Length;
 
-			return (Mathf.Abs(noteTime - curTime) <= hitWindow);
+			return (Mathf.Abs(noteTime - curTime) <= hitWindowWidth * numberOfWindows);
 		}
 
 		// Checks to see if the note is no longer hittable based on the configured hit window width in
@@ -115,9 +116,10 @@ namespace SonicBloom.Koreo.Demos
 			{
 				int noteTime = trackedEvent.StartSample;
 				int curTime = gameController.DelayedSampleTime;
-				int hitWindow = gameController.HitWindowSampleWidth;
+                int hitWindowWidth = gameController.HitWindowSampleWidth;
+                int numberOfWindows = gameController.hitQualityTypes.Length;
 
-				bMissed = (curTime - noteTime > hitWindow);
+                bMissed = (curTime - noteTime > hitWindowWidth * numberOfWindows);
 			}
 			
 			return bMissed;

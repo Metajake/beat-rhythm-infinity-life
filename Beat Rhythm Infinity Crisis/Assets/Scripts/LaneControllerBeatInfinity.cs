@@ -5,11 +5,10 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using SonicBloom.Koreo.Demos;
+using SonicBloom.Koreo;
 
-namespace SonicBloom.Koreo.Demos
-{
-	[AddComponentMenu("Koreographer/Demos/Rhythm Game/Lane Controller")]
-	public class LaneController : MonoBehaviour
+	public class LaneControllerBeatInfinity : MonoBehaviour
 	{
 		#region Fields
 
@@ -30,10 +29,10 @@ namespace SonicBloom.Koreo.Demos
 
 		// A Queue that contains all of the Note Objects currently active (on-screen) within this lane.  Input and
 		//  lifetime validity checks are tracked with operations on this Queue.
-		Queue<NoteObject> trackedNotes = new Queue<NoteObject>();
+		Queue<NoteObjectBeatInfinity> trackedNotes = new Queue<NoteObjectBeatInfinity>();
 
-        // A reference to the Rythm Game Controller.  Provides access to the NoteObject pool and other parameters.
-        RhythmGameController gameController;
+        // A reference to the Rythm Game Controller.  Provides access to the NoteObjectBeatInfinity pool and other parameters.
+        GameControllerBeatInfinity gameController;
 
 		// Lifetime boundaries.  This game goes from the top of the screen to the bottom.
 		float spawnY = 0f;
@@ -81,10 +80,10 @@ namespace SonicBloom.Koreo.Demos
 		#endregion
 		#region Methods
 
-        public void Initialize(RhythmGameController controller)
-        {
-            gameController = controller;
-        }
+		public void Initialize(GameControllerBeatInfinity controller)
+		{
+			gameController = controller;
+		}
 
         // This method controls cleanup, resetting the internals to a fresh state.
         public void Restart()
@@ -171,7 +170,7 @@ namespace SonicBloom.Koreo.Demos
 			// Always check only the first event as we clear out missed entries before.
 			if (trackedNotes.Count > 0 && trackedNotes.Peek().IsNoteHittable())
 			{
-				NoteObject hitNote = trackedNotes.Dequeue();
+				NoteObjectBeatInfinity hitNote = trackedNotes.Dequeue();
 
 				hitNote.OnHit();
 			}
@@ -191,7 +190,7 @@ namespace SonicBloom.Koreo.Demos
 			{
 				KoreographyEvent evt = laneEvents[pendingEventIdx];
 				
-				NoteObject newObj = gameController.GetFreshNoteObject();
+				NoteObjectBeatInfinity newObj = gameController.GetFreshNoteObject();
 				newObj.Initialize(evt, color, this, gameController);
 
 				trackedNotes.Enqueue(newObj);
@@ -245,4 +244,3 @@ namespace SonicBloom.Koreo.Demos
 		
 		#endregion
 	}
-}

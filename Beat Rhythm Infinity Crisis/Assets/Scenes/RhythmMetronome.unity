@@ -344,7 +344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 172397499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e7ae7f4e5664a02863fb0d23d42e1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6858b346ead96884ba6bbe20ecd3302e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 1, a: 1}
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622623264}
+      - m_Target: {fileID: 0}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -614,7 +614,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400536, guid: 93d18b83579e74069bf4143a5529c034, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400536, guid: 93d18b83579e74069bf4143a5529c034, type: 3}
       propertyPath: m_LocalScale.x
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 401469492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e7ae7f4e5664a02863fb0d23d42e1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6858b346ead96884ba6bbe20ecd3302e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 1, b: 0, a: 1}
@@ -1552,7 +1552,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1564,7 +1564,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1576,7 +1576,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!4 &537630456
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 887109963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d806db301495436284b189af3defe53, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a332898944e7a248aaa9a39ebeb7bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visuals: {fileID: 887109965}
@@ -1895,10 +1895,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1025525509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e7ae7f4e5664a02863fb0d23d42e1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6858b346ead96884ba6bbe20ecd3302e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.49803922, b: 0, a: 1}
+  color: {r: 1, g: 0.49803925, b: 0, a: 1}
   targetVisuals: {fileID: 1025525510}
   keyboardButton: 100
   matchedPayloads:
@@ -1913,7 +1913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1060665675}
   - component: {fileID: 1060665674}
-  - component: {fileID: 1060665676}
+  - component: {fileID: 1060665677}
   m_Layer: 0
   m_Name: Target 6
   m_TagString: Untagged
@@ -1978,7 +1978,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1060665676
+--- !u!114 &1060665677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1986,10 +1986,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060665673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e7ae7f4e5664a02863fb0d23d42e1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6858b346ead96884ba6bbe20ecd3302e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.5803922, g: 0, b: 0.827451, a: 1}
+  color: {r: 0.5803922, g: 0, b: 0.82745105, a: 1}
   targetVisuals: {fileID: 1060665674}
   keyboardButton: 108
   matchedPayloads:
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146996546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e7ae7f4e5664a02863fb0d23d42e1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6858b346ead96884ba6bbe20ecd3302e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
@@ -2444,7 +2444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1323030091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88992d84d937f4cf590c0f956a7ec7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a21076aaa2797240aeb7376797e2cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laneController: {fileID: 1649405752}
@@ -2466,7 +2466,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1649405752}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -2477,7 +2477,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1649405752}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -2494,7 +2494,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1649405752}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -2512,7 +2512,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1649405752}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -2523,7 +2523,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1649405752}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -2540,7 +2540,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1649405752}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -2784,7 +2784,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1146996549}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -2795,7 +2795,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1146996549}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -2812,7 +2812,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1146996549}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -2830,7 +2830,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1146996549}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -2841,7 +2841,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1146996549}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -2858,7 +2858,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1146996549}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1445413022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88992d84d937f4cf590c0f956a7ec7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a21076aaa2797240aeb7376797e2cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laneController: {fileID: 1146996549}
@@ -3084,92 +3084,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1525321495}
---- !u!1 &1531559821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1531559822}
-  - component: {fileID: 1531559824}
-  - component: {fileID: 1531559823}
-  m_Layer: 0
-  m_Name: MetronomeLeftExtent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1531559822
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531559821}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2047154344}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1531559823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531559821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e44dfb0665ec2d479b913f6cf1393bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightupTimeRemaining: 0
---- !u!212 &1531559824
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531559821}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 7c55ecda059874ae98483bbf8e719485, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.9375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!1 &1605466558
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,11 +3221,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1622623263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65a6779e70b3c42f9b49aa854490bbbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0134eeb2e4de95748a141e56084093f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventID: Piano
-  hitWindowRangeInMS: 80
+  hitWindowRangeInMS: 20
   noteSpeed: 1
   noteObjectArchetype: {fileID: 887109964}
   noteLanes:
@@ -3320,9 +3234,14 @@ MonoBehaviour:
   - {fileID: 1649405752}
   - {fileID: 401469495}
   - {fileID: 172397502}
-  - {fileID: 1060665676}
+  - {fileID: 1060665677}
   leadInTime: 5
   audioCom: {fileID: 537630455}
+  hitQualityTypes:
+  - Perfect
+  - OK
+  - Bad
+  - Terrible
 --- !u!4 &1622623265
 Transform:
   m_ObjectHideFlags: 0
@@ -3418,7 +3337,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649405749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e7ae7f4e5664a02863fb0d23d42e1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6858b346ead96884ba6bbe20ecd3302e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 0, a: 1}
@@ -3548,7 +3467,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838666008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88992d84d937f4cf590c0f956a7ec7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a21076aaa2797240aeb7376797e2cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laneController: {fileID: 401469495}
@@ -3570,7 +3489,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 401469495}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -3581,7 +3500,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 401469495}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -3598,7 +3517,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 401469495}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -3616,7 +3535,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 401469495}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -3627,7 +3546,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 401469495}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -3644,7 +3563,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 401469495}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -3657,92 +3576,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!1 &1849608296
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1849608297}
-  - component: {fileID: 1849608299}
-  - component: {fileID: 1849608298}
-  m_Layer: 0
-  m_Name: MetronomeRightExtent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1849608297
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1849608296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2047154344}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1849608298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1849608296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e44dfb0665ec2d479b913f6cf1393bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightupTimeRemaining: 0
---- !u!212 &1849608299
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1849608296}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 7c55ecda059874ae98483bbf8e719485, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.9375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!1 &1878567711
 GameObject:
   m_ObjectHideFlags: 0
@@ -4153,10 +3986,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948499822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88992d84d937f4cf590c0f956a7ec7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a21076aaa2797240aeb7376797e2cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laneController: {fileID: 1060665676}
+  laneController: {fileID: 1060665677}
   imageCom: {fileID: 1948499825}
   textCom: {fileID: 1605466560}
 --- !u!114 &1948499828
@@ -4175,7 +4008,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1060665676}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -4186,7 +4019,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1060665676}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -4203,7 +4036,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1060665676}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -4221,7 +4054,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1060665676}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -4232,7 +4065,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1060665676}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -4249,7 +4082,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1060665676}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -4277,91 +4110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5dfbfbfae1741778725d2803fd94db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1983824014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1983824015}
-  - component: {fileID: 1983824017}
-  - component: {fileID: 1983824016}
-  m_Layer: 0
-  m_Name: MetronomeNeedle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1983824015
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983824014}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2047154344}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1983824016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983824014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1596441d234186a4eb840e03047654c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &1983824017
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983824014}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7c55ecda059874ae98483bbf8e719485, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 0.09375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!1 &2043796983
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,7 +4137,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!108 &2043796985
 Light:
@@ -4427,53 +4175,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &2047154343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2047154344}
-  - component: {fileID: 2047154345}
-  m_Layer: 0
-  m_Name: Metronome
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2047154344
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2047154343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09087032, y: -0.78, z: -0.055319488}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1531559822}
-  - {fileID: 1849608297}
-  - {fileID: 1983824015}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2047154345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2047154343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338282293d96868448e212ebdc61af73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allEvents: []
-  extentNormalColor: {r: 1, g: 1, b: 1, a: 1}
-  extentLitUpColor: {r: 0, g: 0.6838235, b: 0.14619671, a: 1}
-  extentLitUpFrameCount: 5
 --- !u!1 &2053644794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,7 +4507,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104371568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88992d84d937f4cf590c0f956a7ec7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a21076aaa2797240aeb7376797e2cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laneController: {fileID: 172397502}
@@ -4828,7 +4529,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 172397502}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -4839,7 +4540,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 172397502}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -4856,7 +4557,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 172397502}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -4874,7 +4575,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 172397502}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -4885,7 +4586,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 172397502}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -4902,7 +4603,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 172397502}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -5036,7 +4737,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2137971997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88992d84d937f4cf590c0f956a7ec7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a21076aaa2797240aeb7376797e2cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laneController: {fileID: 1025525512}
@@ -5058,7 +4759,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1025525512}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -5069,7 +4770,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1025525512}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -5086,7 +4787,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1025525512}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
@@ -5104,7 +4805,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1025525512}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleHold
           m_Mode: 1
           m_Arguments:
@@ -5115,7 +4816,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1025525512}
+        - m_Target: {fileID: 0}
           m_MethodName: CheckNoteHit
           m_Mode: 1
           m_Arguments:
@@ -5132,7 +4833,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1025525512}
+        - m_Target: {fileID: 0}
           m_MethodName: SetScaleDefault
           m_Mode: 1
           m_Arguments:
