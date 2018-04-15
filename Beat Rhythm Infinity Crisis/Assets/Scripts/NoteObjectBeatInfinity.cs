@@ -3,6 +3,7 @@
 //    Copyright © 2014-2017 Sonic Bloom, LLC    
 //----------------------------------------------
 
+using System;
 using UnityEngine;
 
 namespace SonicBloom.Koreo.Demos
@@ -121,7 +122,10 @@ namespace SonicBloom.Koreo.Demos
 
                 bMissed = (curTime - noteTime > hitWindowWidth * numberOfWindows);
 			}
-			
+
+            if (bMissed) {
+                gameController.ReportMiss();
+            }
 			return bMissed;
 		}
 
@@ -136,11 +140,25 @@ namespace SonicBloom.Koreo.Demos
 		// Performs actions when the Note Object is hit.
 		public void OnHit()
 		{
+            int hitQualityIndex = DetermineHitQuality();
+            gameController.ReportHitIndex(hitQualityIndex);
 			ReturnToPool();
 		}
 
-		// Performs actions when the Note Object is cleared.
-		public void OnClear()
+        protected int DetermineHitQuality()
+        {
+            {
+                int noteTime = trackedEvent.StartSample;
+                int curTime = gameController.DelayedSampleTime;
+                int hitWindowWidth = gameController.HitWindowSampleWidth;
+                int numberOfWindows = gameController.hitQualityTypes.Length;
+
+                return Mathf.Abs(noteTime - curTime) / hitWindowWidth;
+            }
+        }
+
+        // Performs actions when the Note Object is cleared.
+        public void OnClear()
 		{
 			ReturnToPool();
 		}

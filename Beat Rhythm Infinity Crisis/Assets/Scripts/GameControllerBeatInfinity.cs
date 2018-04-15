@@ -7,8 +7,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using SonicBloom.Koreo.Demos;
 using SonicBloom.Koreo;
+using System;
 
-	public class GameControllerBeatInfinity : MonoBehaviour
+public class GameControllerBeatInfinity : MonoBehaviour
 	{
 		#region Fields
 
@@ -54,11 +55,13 @@ using SonicBloom.Koreo;
 		// The pool for containing note objects to reduce unnecessary Instantiation/Destruction.
 		Stack<NoteObjectBeatInfinity> noteObjectPool = new Stack<NoteObjectBeatInfinity>();
 
-		#endregion
-		#region Properties
+        private Animator animationTarget;
 
-		// Public access to the hit window.
-		public int HitWindowSampleWidth
+    #endregion
+    #region Properties
+
+    // Public access to the hit window.
+    public int HitWindowSampleWidth
 		{
 			get
 			{
@@ -99,6 +102,10 @@ using SonicBloom.Koreo;
 
 		void Start()
     {
+
+        //Find the animator for the dancing man.
+        this.animationTarget = GameObject.FindObjectOfType<Animator>();
+
         InitializeLeadIn();
 
         // Initialize all the Lanes.
@@ -140,6 +147,18 @@ using SonicBloom.Koreo;
         if (metronome != null) {
             metronome.allEvents = rawEvents;
         }
+    }
+
+    public void ReportHitIndex(int hitQualityIndex)
+    {
+        Debug.Log(this.hitQualityTypes[hitQualityIndex]);
+        int danceNumber = this.hitQualityTypes.Length - hitQualityIndex;
+        this.animationTarget.SetInteger("Dance", danceNumber);
+    }
+
+    public void ReportMiss() {
+        Debug.Log("Missed!");
+        this.animationTarget.SetInteger("Dance", 0);
     }
 
     // Sets up the lead-in-time.  Begins audio playback immediately if the specified lead-in-time is zero.
