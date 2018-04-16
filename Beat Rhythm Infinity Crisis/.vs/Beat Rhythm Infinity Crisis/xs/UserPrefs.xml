@@ -1,5 +1,10 @@
 ﻿<Properties StartupConfiguration="{4ACD70A5-FEA8-CE7E-7106-983CA21B6248}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/Sprite-Outline.shader">
+    <Files>
+      <File FileName="Assets/Scripts/SpriteOutline.cs" Line="42" Column="2" />
+      <File FileName="Assets/Shaders/Sprite-Outline.shader" Line="73" Column="56" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Beat_220Rhythm_220Infinity_220Crisis PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
