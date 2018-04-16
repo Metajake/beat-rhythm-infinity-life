@@ -4,6 +4,7 @@
 //----------------------------------------------
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using SonicBloom.Koreo.Demos;
 using SonicBloom.Koreo;
@@ -55,7 +56,11 @@ public class GameControllerBeatInfinity : MonoBehaviour
 		// The pool for containing note objects to reduce unnecessary Instantiation/Destruction.
 		Stack<NoteObjectBeatInfinity> noteObjectPool = new Stack<NoteObjectBeatInfinity>();
 
-        private Animator animationTarget;
+        protected Animator animationTarget;
+
+        public Text pointsUIText;
+        protected int points = 0;
+        protected int Points { get { return points; } private set { points = value; pointsUIText.text = points.ToString(); } }
 
     #endregion
     #region Properties
@@ -153,12 +158,13 @@ public class GameControllerBeatInfinity : MonoBehaviour
     {
         Debug.Log(this.hitQualityTypes[hitQualityIndex]);
         int danceNumber = this.hitQualityTypes.Length - hitQualityIndex;
+        Points += danceNumber;
         this.animationTarget.SetInteger("Dance", danceNumber);
     }
 
     public void ReportMiss() {
         Debug.Log("Missed!");
-        this.animationTarget.SetInteger("Dance", 0);
+        this.animationTarget.SetInteger("Dance", 0);    //should probably do this on the last animation finishing, instead
     }
 
     // Sets up the lead-in-time.  Begins audio playback immediately if the specified lead-in-time is zero.
