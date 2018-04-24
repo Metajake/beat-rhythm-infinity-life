@@ -7,7 +7,7 @@ using System;
 public class MetronomeController : MonoBehaviour {
 
     public List<KoreographyEvent> allEvents;
-    private SonicBloom.Koreo.Demos.RhythmGameController gameController;
+    private GameControllerBeatInfinity gameController;
 
     public Color extentNormalColor;
     public Color extentLitUpColor;
@@ -26,7 +26,7 @@ public class MetronomeController : MonoBehaviour {
         rightExtent = GameObject.Find("MetronomeRightExtent");
         needle = GameObject.Find("MetronomeNeedle");
         //should get allEvents populated at RhythmGameController's Start
-        gameController = GameObject.FindObjectOfType<SonicBloom.Koreo.Demos.RhythmGameController>();
+        gameController = GameObject.FindObjectOfType<GameControllerBeatInfinity>();
         distanceBetweenExtents = rightExtent.transform.position.x - leftExtent.transform.position.x;
         
     }
@@ -59,7 +59,6 @@ public class MetronomeController : MonoBehaviour {
         double bps = calculateBeatsPerSecond();
         double secondsPerBeat = 1d / bps;
         progress = (elapsedSeconds() % secondsPerBeat) / secondsPerBeat;
-        //needle.transform.position = Vector3.Lerp((isLeftActive ? rightExtent : leftExtent).transform.position, getCurrentTarget().transform.position, (float) progress);
         float newX = isLeftActive ? rightExtent.transform.position.x - distanceBetweenExtents * (float)progress : leftExtent.transform.position.x + distanceBetweenExtents * (float)progress;
         needle.transform.position = new Vector3(newX, needle.transform.position.y, needle.transform.position.z);
 
